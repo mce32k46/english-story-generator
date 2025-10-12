@@ -2,16 +2,7 @@
 # coding: utf-8
 
 # # English Learners' Short Story Generator
-#Pfad für Anaconda cli: cd OneDrive - Telefonica\Persönlich\VAWI\Generative AI
 
-# --------------------
-# ### Proxy Einstellungen
-# --------------------
-import os
-os.environ["HTTP_PROXY"] = "http://bc-proxy-vip.de.pri.o2.com:8080"
-os.environ["HTTPS_PROXY"] = "http://bc-proxy-vip.de.pri.o2.com:8080"
-#os.environ["NO_PROXY"] = "localhost,127.0.0.1,::1,.telefonica.com,.celonis.cloud"
-#os.environ["OLLAMA_HOST"] = "http://localhost:11434/v1/chat/completions"
 
 # --------------------
 # ### Öffne User Interface im Browser mit Streamlit
@@ -36,6 +27,7 @@ prompt_values = {
 # --------------------
 # ### LLM-Setup
 # --------------------
+import os
 from langchain_openai import ChatOpenAI 
 from dotenv import load_dotenv
 load_dotenv()
