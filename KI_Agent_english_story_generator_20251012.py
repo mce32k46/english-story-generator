@@ -58,7 +58,7 @@ from langchain_community.document_loaders.csv_loader import CSVLoader
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(BASE_DIR, "vokabeln_mit_themen.csv")
 
-loader = CSVLoader(file_path=csv_path, csv_args={"delimiter": ";", "encoding": "utf-8-sig"}, metadata_columns=["topic"]) #, "unit", "learning_year"
+loader = CSVLoader(file_path=csv_path, csv_args={"delimiter": ";"}, metadata_columns=["topic"]) #, "unit", "learning_year"
 docs = loader.load()
 
 # Metadaten um "Noise" bereinigen: nur 'topic' behalten
