@@ -53,7 +53,12 @@ client = Client()
 # --------------------
 #Step 1: Text laden via langchain csvloader mit Metadaten
 from langchain_community.document_loaders.csv_loader import CSVLoader 
-loader = CSVLoader(file_path='vokabeln_mit_themen.csv', csv_args={"delimiter": ";"}, metadata_columns=["topic"]) #, "unit", "learning_year"
+
+# Absoluter Pfad zur CSV, relativ zu .py-Datei
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(BASE_DIR, "vokabeln_mit_themen.csv")
+
+loader = CSVLoader(file_path=csv_path, csv_args={"delimiter": ";"}, metadata_columns=["topic"]) #, "unit", "learning_year"
 docs = loader.load()
 
 # Metadaten um "Noise" bereinigen: nur 'topic' behalten
