@@ -32,9 +32,9 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") #Umgebungsvariable aus .env-Datei laden
+#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") #Umgebungsvariable aus .env-Datei laden
 
-llm = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model="gpt-4o-mini") #LangChain-Wrapper für OpenAI
+llm = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-4o-mini") #LangChain-Wrapper für OpenAI
 
 # --------------------
 # ### LangSmith zur Agenten-Evaluierung
