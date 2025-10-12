@@ -42,7 +42,7 @@ llm = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model="gpt-4o-mini") #LangChain-
 from langsmith import Client
 
 # aus .env holen
-os.environ["LANGSMITH_API_KEY"] = os.getenv("LANGSMITH_API_KEY_PERSONAL")
+os.environ["LANGSMITH_API_KEY"] = os.getenv("VAWI_API_KEY")
 os.environ["LANGSMITH_TRACING_V2"] = "true"
 os.environ["LANGSMITH_ENDPOINT"] = "https://eu.api.smith.langchain.com" # EU-Endpoint wählen
 os.environ["LANGCHAIN_PROJECT"] = "English Learners' Short Story Generator"
