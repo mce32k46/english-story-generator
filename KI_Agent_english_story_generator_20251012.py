@@ -77,18 +77,23 @@ from langchain_community.vectorstores import FAISS
 
 import streamlit as st
 from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 
 @st.cache_resource #Embeddings und Vektordaten in Streamlit cachen, damit diese Schritte nur einmal ausgeführt werden 
 def load_vectorstore(_docs):
-    # Embeddings laden (nur einmal)
+    # Embeddings mit SentenceTransformer laden (nur einmal)
     embedding_model = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
         model_kwargs={"device": "cpu"}
     )
+    
+    # Text splitten, um Größe des Kontextfensters nicht zu überfrachten 
+    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=50, chunk_overlap=0)
+    doc_splits = text_splitter.split_documents(docs)
 
     # FAISS-Vektorspeicher erstellen (ebenfalls gecacht)
-    vectorstore = FAISS.from_documents(documents=docs, embedding=embedding_model)
+    vectorstore = FAISS.from_documents(documents=doc_splits, embedding=embedding_model)
     return vectorstore
 
 # FAISS Vektorstore-Objekt laden
