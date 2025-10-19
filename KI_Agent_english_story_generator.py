@@ -28,8 +28,7 @@ prompt_values = {
 # ### LLM-Setup
 # --------------------
 import os
-from langchain.chat_models import ChatOpenAI
-
+from langchain_openai import ChatOpenAI 
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -73,9 +72,11 @@ for doc in docs:
 
 
 #Step 2: Semantisches Embedding und Vektorisierung des Textes
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
+
 import streamlit as st
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 
@@ -88,7 +89,7 @@ def load_vectorstore(_docs):
     )
     
     # Text splitten, um Größe des Kontextfensters nicht zu überfrachten 
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=50, chunk_overlap=0) #.from_tiktoken_encoder
+    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=50, chunk_overlap=0)
     doc_splits = text_splitter.split_documents(docs)
 
     # FAISS-Vektorspeicher erstellen (ebenfalls gecacht)
@@ -105,7 +106,7 @@ retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k
 # --------------------
 # ### Vokabel-RAG-Tool
 # --------------------
-from langchain.tools import tool
+from langchain_core.tools import tool
 from collections import defaultdict
 
 @tool #LangChain Tool-decorator
