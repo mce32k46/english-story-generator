@@ -1,30 +1,34 @@
 # --- Basis ---
-python-dotenv>=1.0.0
-streamlit==1.30.0
-langchain>=1.0.0,<2.0.0
-langchain-openai>=0.1.9
-langchain-community>=0.4.0
-langchain-core>=0.4.0
+python-dotenv==1.0.1
+streamlit==2.18.0
+numpy==2.2.4
+pandas==2.1.0
+
+# --- LangChain ---
+langchain==1.0.0
+langchain-openai==0.2.0
+langchain-community==0.4.0
+langchain-core==1.0.0
 
 # --- LangGraph (Supervisor + Agents) ---
-langgraph>=0.1.4
-langgraph-supervisor>=0.0.7
+langgraph==0.4.0
+langgraph-supervisor==0.2.0
 
 # --- Embeddings + Vektorspeicher ---
-faiss-cpu>=1.7.3
-sentence-transformers>=2.2.2
-torch>=2.0.0
+faiss-cpu==1.7.4
+sentence-transformers==2.2.2
+torch==2.1.0
 
 # --- Datenquellen / Tools ---
-wikipedia-api>=0.5.4
-pandas>=2.0.3
-numpy>=1.23.5,<2.0.0
+wikipedia==1.4.0
 
 # --- LangSmith (Tracing & Monitoring) ---
-langsmith>=0.1.27
+langsmith==0.3.0
 
 # --- Entwicklung / Test (optional) ---
-ipykernel>=6.30.0
+ipykernel==6.27.0
+
+
 
 
 
