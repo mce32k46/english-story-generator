@@ -89,7 +89,7 @@ def load_vectorstore(_docs):
     )
     
     # Text splitten, um Größe des Kontextfensters nicht zu überfrachten 
-    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=50, chunk_overlap=0)
+    text_splitter = RecursiveTextSplitter.from_tiktoken_encoder(chunk_size=50, chunk_overlap=0)
     doc_splits = text_splitter.split_documents(docs)
 
     # FAISS-Vektorspeicher erstellen (ebenfalls gecacht)
