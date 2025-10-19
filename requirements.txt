@@ -1,12 +1,12 @@
 # Streamlit
 streamlit==1.30.0
 
-# LangChain vor 1.0, kompatibel mit alten Imports
-langchain==0.2.29
+# LangChain aktuelle Version
+langchain>=1.0.0
 
 # LangChain Community-Pakete
-langchain_community==0.2.10
-langchain-huggingface==0.1.0
+langchain_community>=0.2.12
+langchain-huggingface>=0.1.0
 
 # HuggingFace Embeddings
 sentence-transformers>=2.2.2
@@ -15,6 +15,7 @@ torch>=2.0.0
 # Weitere Hilfspakete
 python-dotenv>=1.0.0
 faiss-cpu>=1.7.3
+
 
 
 
