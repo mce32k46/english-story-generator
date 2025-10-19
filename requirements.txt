@@ -21,10 +21,12 @@ pandas==2.1.1
 numpy==1.23.5
 
 # --- LangSmith (Tracing & Monitoring) ---
-langsmith==0.1.27
+langsmith==0.1.79
 
 # --- Entwicklung / Test (optional) ---
 ipykernel==6.27.0
+
+
 
 
 
