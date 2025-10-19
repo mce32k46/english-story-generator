@@ -1,9 +1,10 @@
 # --- Basis ---
 python-dotenv==1.0.1
 streamlit==1.30.0
-langchain==0.2.14
+langchain>=0.2.50
+langchain-core>=0.2.50
 langchain-openai==0.1.9
-langchain-community==0.2.10
+langchain-community>=0.2.15
 
 # --- LangGraph (Supervisor + Agents) ---
 langgraph==0.3.5
@@ -24,6 +25,7 @@ langsmith>=0.1.75,<0.2.0
 
 # --- Entwicklung / Test (optional) ---
 ipykernel==6.27.0
+
 
 
 
