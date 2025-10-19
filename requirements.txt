@@ -7,10 +7,12 @@ langchain==0.2.30
 langchain_community==0.2.10
 langchain-huggingface==0.1.0
 
-# --- Embeddings & Vektorspeicher ---
-faiss-cpu==1.7.4
-sentence-transformers==2.2.2
+# --- Embeddings & Vektorspeicher (kompatibel) ---
+sentence-transformers==2.2.0
 torch==2.1.0
+
+# FAISS entfernt, da oft Build-Probleme in Cloud
+# faiss-cpu kann lokal installiert werden, aber in Streamlit Cloud Probleme
 
 # --- Datenquellen / Tools ---
 wikipedia==1.4.0
@@ -26,6 +28,8 @@ langgraph-supervisor==0.0.7
 
 # --- Entwicklung / Test (optional) ---
 ipykernel==6.27.0
+
+
 
 
 
