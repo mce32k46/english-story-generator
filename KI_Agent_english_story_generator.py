@@ -28,7 +28,7 @@ prompt_values = {
 # ### LLM-Setup
 # --------------------
 import os
-from langchain.chat_models import ChatOpenAI 
+from langchain.chat_models.openai import ChatOpenAI 
 from dotenv import load_dotenv
 load_dotenv()
 
