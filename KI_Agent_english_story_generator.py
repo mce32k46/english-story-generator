@@ -182,9 +182,12 @@ vocabulary_retrieval_agent = create_react_agent(
 # ### Wikipedia Agent
 # --------------------
 #Prompt für den Wikipedia Agenten
-from langchain.prompts import PromptTemplate
+from langchain.prompts.chat import ChatPromptTemplate
+# oder
+#from langchain.prompts import PromptTemplate  # manchmal noch verfügbar
 
-wikipedia_prompt_template = PromptTemplate(
+
+wikipedia_prompt_template = ChatPromptTemplate(
     template=(
         "You are a wikipedia search agent.\n\n"
         "INSTRUCTIONS:\n"
