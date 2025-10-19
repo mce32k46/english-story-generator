@@ -11,7 +11,7 @@ langgraph==0.3.5
 langgraph-supervisor==0.0.7
 
 # --- Embeddings + Vektorspeicher ---
-faiss-cpu==1.8.6
+faiss-cpu==1.8.0
 sentence-transformers==2.2.2
 torch==2.0.1
 
@@ -25,6 +25,7 @@ langsmith==0.1.75
 
 # --- Entwicklung / Test (optional) ---
 ipykernel==6.27.0
+
 
 
 
