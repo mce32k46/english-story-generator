@@ -1,29 +1,20 @@
-# --- Basis ---
-python-dotenv
 streamlit
 langchain>=0.2.14
 langchain_community>=0.2.10
-
-# --- LangGraph (Supervisor + Agents) ---
+langchain-huggingface>=0.1.0
+faiss-cpu
+sentence-transformers
+torch
+python-dotenv
+pandas
+numpy
+wikipedia
+langsmith>=0.1.27
+ipykernel
 langgraph>=0.1.4
 langgraph-supervisor>=0.0.7
 
-# --- Embeddings + Vektorspeicher ---
-langchain-huggingface>=0.1.0
-faiss-cpu>=1.8.0
-sentence-transformers>=2.2.2
-torch>=2.0.0
 
-# --- Datenquellen / Tools ---
-wikipedia
-pandas
-numpy
-
-# --- LangSmith (Tracing & Monitoring) ---
-langsmith>=0.1.27
-
-# --- Entwicklung / Test (optional) ---
-ipykernel
 
 
 
