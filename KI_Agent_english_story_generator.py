@@ -72,9 +72,7 @@ for doc in docs:
 
 
 #Step 2: Semantisches Embedding und Vektorisierung des Textes
-from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-
 import streamlit as st
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
