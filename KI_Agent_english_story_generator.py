@@ -77,7 +77,7 @@ from langchain_community.vectorstores import FAISS
 
 import streamlit as st
 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitter import RecursiveTextSplitter
 from langchain_community.vectorstores import FAISS
 
 @st.cache_resource #Embeddings und Vektordaten in Streamlit cachen, damit diese Schritte nur einmal ausgeführt werden 
