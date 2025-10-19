@@ -8,9 +8,9 @@ langchain_community==0.2.10
 langchain-huggingface==0.1.0
 
 # --- Embeddings & Vektorspeicher ---
-faiss-cpu==1.8.6
+faiss-cpu==1.7.4
 sentence-transformers==2.2.2
-torch==2.2.0
+torch==2.1.0
 
 # --- Datenquellen / Tools ---
 wikipedia==1.4.0
@@ -26,6 +26,7 @@ langgraph-supervisor==0.0.7
 
 # --- Entwicklung / Test (optional) ---
 ipykernel==6.27.0
+
 
 
 
