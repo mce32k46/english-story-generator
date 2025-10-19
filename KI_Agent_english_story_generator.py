@@ -28,7 +28,7 @@ prompt_values = {
 # ### LLM-Setup
 # --------------------
 import os
-from langchain.chat_models.openai import ChatOpenAI 
+from langchain.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -87,7 +87,7 @@ def load_vectorstore(_docs):
     )
     
     # Text splitten, um Größe des Kontextfensters nicht zu überfrachten 
-    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=50, chunk_overlap=0)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=50, chunk_overlap=0) #.from_tiktoken_encoder
     doc_splits = text_splitter.split_documents(docs)
 
     # FAISS-Vektorspeicher erstellen (ebenfalls gecacht)
@@ -104,7 +104,7 @@ retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k
 # --------------------
 # ### Vokabel-RAG-Tool
 # --------------------
-from langchain_core.tools import tool
+from langchain.tools import tool
 from collections import defaultdict
 
 @tool #LangChain Tool-decorator
