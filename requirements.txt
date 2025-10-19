@@ -7,24 +7,26 @@ langchain-community==0.2.10
 langchain-core==0.2.32
 
 # --- LangGraph (Supervisor + Agents) ---
-langgraph==0.1.4
+langgraph==0.3.5
 langgraph-supervisor==0.0.7
 
 # --- Embeddings + Vektorspeicher ---
-faiss-cpu==1.8.0
+faiss-cpu==1.8.6
 sentence-transformers==2.2.2
 torch==2.0.1
 
 # --- Datenquellen / Tools ---
 wikipedia==1.4.0
 pandas==2.1.1
-numpy==1.23.5
+numpy==1.24.4
 
 # --- LangSmith (Tracing & Monitoring) ---
-langsmith==0.1.79
+langsmith==0.1.75
 
 # --- Entwicklung / Test (optional) ---
 ipykernel==6.27.0
+
+
 
 
 
