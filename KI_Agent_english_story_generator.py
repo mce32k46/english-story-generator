@@ -72,12 +72,12 @@ for doc in docs:
 
 
 #Step 2: Semantisches Embedding und Vektorisierung des Textes
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
 import streamlit as st
-
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 
 @st.cache_resource #Embeddings und Vektordaten in Streamlit cachen, damit diese Schritte nur einmal ausgeführt werden 
@@ -182,12 +182,9 @@ vocabulary_retrieval_agent = create_react_agent(
 # ### Wikipedia Agent
 # --------------------
 #Prompt für den Wikipedia Agenten
-from langchain.prompts import ChatPromptTemplate
-# oder
-#from langchain.prompts import PromptTemplate  # manchmal noch verfügbar
+from langchain.prompts import PromptTemplate
 
-
-wikipedia_prompt_template = ChatPromptTemplate(
+wikipedia_prompt_template = PromptTemplate(
     template=(
         "You are a wikipedia search agent.\n\n"
         "INSTRUCTIONS:\n"
