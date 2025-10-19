@@ -1,31 +1,22 @@
-# --- Basis ---
-python-dotenv
-streamlit
+# Streamlit
+streamlit==1.30.0
+
+# LangChain vor 1.0, kompatibel mit alten Imports
 langchain==0.2.29
-langchain-huggingface==0.1.0
-langchain-openai>=0.1.9
+
+# LangChain Community-Pakete
 langchain_community==0.2.10
-langchain-core>=0.2.10
+langchain-huggingface==0.1.0
 
-# --- LangGraph (Supervisor + Agents) ---
-langgraph>=0.1.4
-langgraph-supervisor>=0.0.7
-
-# --- Embeddings + Vektorspeicher ---
-faiss-cpu>=1.8.0
+# HuggingFace Embeddings
 sentence-transformers>=2.2.2
 torch>=2.0.0
 
-# --- Datenquellen / Tools ---
-wikipedia
-pandas
-numpy
+# Weitere Hilfspakete
+python-dotenv>=1.0.0
+faiss-cpu>=1.7.3
 
-# --- LangSmith (Tracing & Monitoring) ---
-langsmith>=0.1.27
 
-# --- Entwicklung / Test (optional) ---
-ipykernel
 
 
 
