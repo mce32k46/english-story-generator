@@ -1,6 +1,6 @@
 # --- Basis ---
 python-dotenv==1.0.1
-streamlit==3.12.0   # aktuelle Streamlit, kompatibel mit numpy>=2.1
+streamlit==1.50.0
 numpy==2.3.0
 pandas==2.1.0
 
@@ -27,6 +27,8 @@ langsmith==0.3.0
 
 # --- Entwicklung / Test (optional) ---
 ipykernel==6.27.0
+
+
 
 
 
