@@ -1,20 +1,36 @@
+# --------------------
 # Streamlit
+# --------------------
 streamlit==1.30.0
 
-# LangChain aktuelle Version
+# --------------------
+# Aktuelle LangChain
+# --------------------
 langchain>=1.0.0
-
-# LangChain Community-Pakete
-langchain_community>=0.2.12
 langchain-huggingface>=0.1.0
+langchain-community>=0.4.0
 
+# --------------------
 # HuggingFace Embeddings
+# --------------------
 sentence-transformers>=2.2.2
 torch>=2.0.0
-
-# Weitere Hilfspakete
-python-dotenv>=1.0.0
 faiss-cpu>=1.7.3
+
+# --------------------
+# Utilities
+# --------------------
+python-dotenv>=1.0.0
+
+# --------------------
+# Optional: für LangGraph / LangSmith / Wikipedia
+# --------------------
+langgraph>=0.4.0
+langgraph-supervisor>=0.1.0
+langsmith>=0.4.0
+wikipedia-api>=0.5.4
+
+
 
 
 
