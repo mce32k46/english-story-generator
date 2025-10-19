@@ -1,34 +1,32 @@
-# --------------------
-# Streamlit
-# --------------------
+# --- Basis ---
+python-dotenv>=1.0.0
 streamlit==1.30.0
-
-# --------------------
-# Aktuelle LangChain
-# --------------------
-langchain>=1.0.0
-langchain-huggingface>=0.1.0
+langchain>=1.0.0,<2.0.0
+langchain-openai>=0.1.9
 langchain-community>=0.4.0
+langchain-core>=0.4.0
 
-# --------------------
-# HuggingFace Embeddings
-# --------------------
+# --- LangGraph (Supervisor + Agents) ---
+langgraph>=0.1.4
+langgraph-supervisor>=0.0.7
+
+# --- Embeddings + Vektorspeicher ---
+faiss-cpu>=1.7.3
 sentence-transformers>=2.2.2
 torch>=2.0.0
-faiss-cpu>=1.7.3
 
-# --------------------
-# Utilities
-# --------------------
-python-dotenv>=1.0.0
-
-# --------------------
-# Optional: für LangGraph / LangSmith / Wikipedia
-# --------------------
-langgraph>=0.4.0
-langgraph-supervisor>=0.1.0
-langsmith>=0.4.0
+# --- Datenquellen / Tools ---
 wikipedia-api>=0.5.4
+pandas>=2.0.3
+numpy>=1.23.5,<2.0.0
+
+# --- LangSmith (Tracing & Monitoring) ---
+langsmith>=0.1.27
+
+# --- Entwicklung / Test (optional) ---
+ipykernel>=6.30.0
+
+
 
 
 
