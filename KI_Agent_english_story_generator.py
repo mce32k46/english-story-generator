@@ -77,7 +77,7 @@ from langchain_community.vectorstores import FAISS
 
 import streamlit as st
 
-from langchain.text_splitter import RecursiveTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 
 @st.cache_resource #Embeddings und Vektordaten in Streamlit cachen, damit diese Schritte nur einmal ausgeführt werden 
@@ -89,7 +89,7 @@ def load_vectorstore(_docs):
     )
     
     # Text splitten, um Größe des Kontextfensters nicht zu überfrachten 
-    text_splitter = RecursiveTextSplitter.from_tiktoken_encoder(chunk_size=50, chunk_overlap=0)
+    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=50, chunk_overlap=0)
     doc_splits = text_splitter.split_documents(docs)
 
     # FAISS-Vektorspeicher erstellen (ebenfalls gecacht)
