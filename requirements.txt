@@ -8,7 +8,7 @@ langchain-core>=0.2.10
 
 # --- LangGraph (Supervisor + Agents) ---
 langgraph>=0.1.4
-langgraph-supervisor>=0.0.7
+langgraph-supervisor==0.0.7
 
 # --- Embeddings + Vektorspeicher ---
 faiss-cpu>=1.8.0
@@ -25,6 +25,7 @@ langsmith>=0.1.27
 
 # --- Entwicklung / Test (optional) ---
 ipykernel
+
 
 
 
