@@ -2,9 +2,7 @@
 python-dotenv
 streamlit
 langchain>=0.2.14
-langchain-openai>=0.1.9
-langchain-community>=0.2.10
-langchain-core>=0.2.10
+langchain_community>=0.2.10
 
 # --- LangGraph (Supervisor + Agents) ---
 langgraph>=0.1.4
@@ -26,4 +24,6 @@ langsmith>=0.1.27
 
 # --- Entwicklung / Test (optional) ---
 ipykernel
+
+
 
